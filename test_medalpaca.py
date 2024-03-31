@@ -6,10 +6,7 @@ pl = pipeline("text-generation", model="medalpaca/medalpaca-13b", tokenizer="med
 
 
 op_num = 4
-if op_num==5:
-    df = pd.read_json('../medbullets_op5.json')
-else:
-    df = pd.read_json('../medbullets_op4.json')
+df = pd.read_json(f'../medbullets_op{op_num}.json')
 outputs = []
 predicted = []
 correct = 0
